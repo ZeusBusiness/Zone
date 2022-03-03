@@ -7,7 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DigitalPayment\PineLabs\" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Zone.DataManager.Abstract\Zone.DataManager.Abstract.csproj" />
+    <ProjectReference Include="..\Zone.Infrastructure\Zone.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

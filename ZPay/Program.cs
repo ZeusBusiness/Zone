@@ -1,3 +1,7 @@
+using Microsoft.Extensions.DependencyInjection;
+using Zone.DataManager.Abstract.DataProvider.DigitalPayment.PineLabs;
+using Zone.DataProvider.DigitalPayment.PineLabs;
+
 namespace ZPay
 {
     internal static class Program
@@ -10,8 +14,20 @@ namespace ZPay
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new ZPay());
+
+            var services = new ServiceCollection();
+            ConfigureServices(services);
+            services.AddScoped<ZPay>();
+            using (ServiceProvider serviceProvider = services.BuildServiceProvider())
+            {
+                ApplicationConfiguration.Initialize();
+                var zpay = serviceProvider.GetRequiredService<ZPay>();
+                Application.Run(zpay);
+            }
+        }
+        private static void ConfigureServices(ServiceCollection services)
+        {
+            services.AddScoped<ISaleRequestProvider, SaleRequestProvider>();
         }
     }
 }
