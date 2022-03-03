@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -57,6 +58,11 @@ namespace ZPay
                 Console.WriteLine();
                 PrintException(ex.InnerException);
             }
+        }
+
+        private void zeusLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://zeusbusiness.in");
         }
     }
 }
