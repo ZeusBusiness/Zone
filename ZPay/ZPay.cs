@@ -1,47 +1,91 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Diagnostics;
 using Zone.DataManager.Abstract.DataProvider.DigitalPayment.PineLabs;
+using Zone.DataProvider.DigitalPayment.PineLabs;
 using Zone.Infrastructure.Genric.DigitalPayment.PineLabs;
 
 namespace ZPay
 {
     public partial class ZPay : Form
     {
-        private readonly ISaleRequestProvider _provider;
+        private readonly ISaleRequestProvider _provider = null;
         private static SaleResponse response = new SaleResponse();
+        private FileSystemWatcher watcher = null;
+
         public ZPay(ISaleRequestProvider provider)
         {
-            InitializeComponent();
             _provider = provider;
-            FileSystemWatcher watcher = new FileSystemWatcher();
-            watcher.Path = @"C:\ZPay";
+            InitializeComponent();
+            string path = @"C:\ZPay";
+            watcher = new FileSystemWatcher
+            {
+                Path = path
+            };
             watcher.NotifyFilter = NotifyFilters.Attributes
-                                 | NotifyFilters.CreationTime
-                                 | NotifyFilters.DirectoryName
-                                 | NotifyFilters.FileName
-                                 | NotifyFilters.LastAccess
-                                 | NotifyFilters.LastWrite
-                                 | NotifyFilters.Security
-                                 | NotifyFilters.Size;
+                                | NotifyFilters.CreationTime
+                                | NotifyFilters.DirectoryName
+                                | NotifyFilters.FileName
+                                | NotifyFilters.LastAccess
+                                | NotifyFilters.LastWrite
+                                | NotifyFilters.Security
+                                | NotifyFilters.Size;
 
-            watcher.Filter = "*.*";
+            watcher.Filter = "*.json";
             watcher.Created += new FileSystemEventHandler(OnCreated);
-            //watcher.Changed += new FileSystemEventHandler(OnChanged);
-            watcher.Error += new ErrorEventHandler(OnError);
+            
             watcher.EnableRaisingEvents = true;
+            watcher.Error += new ErrorEventHandler(OnError);
         }
 
-        private async void OnCreated(object sender, FileSystemEventArgs e)
+
+        public async void OnCreated(object sender, FileSystemEventArgs e)
         {
+
             response = await _provider.SendData(e.FullPath);
+           
+        }
+        private void refreshPic_Click(object sender, EventArgs e)
+        {
+            if (!response.ResponseCode)
+            {
+                OnTransactionSuccess();
+            }
+            else
+            {
+                OnTransactionError();
+            }
+        }
+
+        private void logPicture_Click(object sender, EventArgs e)
+        {
+            DirectoryInfo di = new DirectoryInfo(@"C:\ZPay");
+            foreach (FileInfo file in di.GetFiles())
+            {
+                file.Delete();
+            }
+            foreach (DirectoryInfo dir in di.GetDirectories())
+            {
+                dir.Delete(true);
+            }
+        }
+
+        public async void OnTransactionSuccess()
+        {
+            datetime.Text = "DateTime: " + response.InvoiceDate;
+            responseMessage.Text = "Message: " + response.ResponseMessage;
+            transactionID.Text = "TxnID: " + response.PlutusTransactionReferenceID.ToString();
+            responseStatus.Text = "Response: Success";
+            additionalInfo.Visible = false;
+        }
+        public async void OnTransactionError()
+        {
+            datetime.Text = "DateTime: " + response.InvoiceDate;
+            responseMessage.Text = "Message: " + response.ResponseMessage;
+            transactionID.Visible = false;
+            responseStatus.Text = "Response: Failure";
+            foreach(var info in response.AdditionalInfo)
+            {
+              additionalInfo.Text = info.Tag;
+            }
         }
 
 
@@ -62,7 +106,11 @@ namespace ZPay
 
         private void zeusLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://zeusbusiness.in");
+            var processes = Process.GetProcessesByName("Chrome");
+            var path = processes.FirstOrDefault()?.MainModule?.FileName;
+            Process.Start(path, "https://zeusbusiness.in");
         }
+
+      
     }
 }

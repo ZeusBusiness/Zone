@@ -27,16 +27,18 @@ namespace Zone.DataProvider.DigitalPayment.PineLabs
                         r.Close();
                         File.Delete(file);
                         HttpClient client = new HttpClient();
-                        client.BaseAddress = new Uri("https://demo.ezetap.com/api/3.0/p2p/start");
+                        client.BaseAddress = new Uri("https://www.plutuscloudserviceuat.in:8201/API/CloudBasedIntegration/V1/UploadBilledTransaction");
                         var response = await client.PostAsync("", new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json"));
                         saleResponse = JsonConvert.DeserializeObject<SaleResponse>(await response.Content.ReadAsStringAsync());
-                        //responseResult.date = DateTime.Now;
+                        saleResponse.InvoiceDate = DateTime.Now;
                         break;
                         }
                 }
                 catch (Exception ex) when (i <= NumberOfRetries)
                 {
                     Thread.Sleep(DelayOnRetry);
+                    saleResponse.InvoiceDate = DateTime.Now;
+                    saleResponse.ResponseCode = true;
                 }
             }
             return saleResponse;
