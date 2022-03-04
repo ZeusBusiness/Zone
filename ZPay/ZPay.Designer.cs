@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ZPay));
             this.parrentPanel = new System.Windows.Forms.Panel();
             this.mainPanel = new System.Windows.Forms.Panel();
@@ -38,7 +39,6 @@
             this.ResponseTab = new System.Windows.Forms.TabPage();
             this.refreshPic = new System.Windows.Forms.PictureBox();
             this.responseStatus = new System.Windows.Forms.Label();
-            this.additionalInfo = new System.Windows.Forms.Label();
             this.transactionID = new System.Windows.Forms.Label();
             this.logPicture = new System.Windows.Forms.PictureBox();
             this.responseMessage = new System.Windows.Forms.Label();
@@ -51,6 +51,7 @@
             this.intText = new System.Windows.Forms.Label();
             this.integrationPicture = new System.Windows.Forms.PictureBox();
             this.logo = new System.Windows.Forms.PictureBox();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.parrentPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adPicture)).BeginInit();
@@ -107,6 +108,7 @@
             this.closeBtn.TabIndex = 2;
             this.closeBtn.Text = "X";
             this.closeBtn.UseVisualStyleBackColor = true;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
             // adPicture
             // 
@@ -131,7 +133,6 @@
             // 
             this.ResponseTab.Controls.Add(this.refreshPic);
             this.ResponseTab.Controls.Add(this.responseStatus);
-            this.ResponseTab.Controls.Add(this.additionalInfo);
             this.ResponseTab.Controls.Add(this.transactionID);
             this.ResponseTab.Controls.Add(this.logPicture);
             this.ResponseTab.Controls.Add(this.responseMessage);
@@ -162,15 +163,6 @@
             this.responseStatus.Size = new System.Drawing.Size(57, 15);
             this.responseStatus.TabIndex = 6;
             this.responseStatus.Text = "Response";
-            // 
-            // additionalInfo
-            // 
-            this.additionalInfo.AutoSize = true;
-            this.additionalInfo.Location = new System.Drawing.Point(12, 132);
-            this.additionalInfo.Name = "additionalInfo";
-            this.additionalInfo.Size = new System.Drawing.Size(83, 15);
-            this.additionalInfo.TabIndex = 5;
-            this.additionalInfo.Text = "AdditionalInfo";
             // 
             // transactionID
             // 
@@ -295,6 +287,17 @@
             this.logo.TabIndex = 0;
             this.logo.TabStop = false;
             // 
+            // notifyIcon
+            // 
+            this.notifyIcon.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.notifyIcon.BalloonTipText = "ZPay";
+            this.notifyIcon.BalloonTipTitle = "ZPay";
+            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
+            this.notifyIcon.Tag = "ZPay";
+            this.notifyIcon.Text = "notifyIcon";
+            this.notifyIcon.Visible = true;
+            this.notifyIcon.Click += new System.EventHandler(this.notifyIcon_Click);
+            // 
             // ZPay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -306,6 +309,7 @@
             this.Name = "ZPay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ZPay";
+            this.Load += new System.EventHandler(this.ZPay_Load);
             this.parrentPanel.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
@@ -345,9 +349,9 @@
         private Label datetime;
         private Label responseMessage;
         private Label transactionID;
-        private Label additionalInfo;
         private Label responseStatus;
         private PictureBox refreshPic;
         private Label copyright;
+        private NotifyIcon notifyIcon;
     }
 }

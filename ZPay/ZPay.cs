@@ -31,7 +31,7 @@ namespace ZPay
 
             watcher.Filter = "*.json";
             watcher.Created += new FileSystemEventHandler(OnCreated);
-            
+
             watcher.EnableRaisingEvents = true;
             watcher.Error += new ErrorEventHandler(OnError);
         }
@@ -41,7 +41,7 @@ namespace ZPay
         {
 
             response = await _provider.SendData(e.FullPath);
-           
+
         }
         private void refreshPic_Click(object sender, EventArgs e)
         {
@@ -74,7 +74,6 @@ namespace ZPay
             responseMessage.Text = "Message: " + response.ResponseMessage;
             transactionID.Text = "TxnID: " + response.PlutusTransactionReferenceID.ToString();
             responseStatus.Text = "Response: Success";
-            additionalInfo.Visible = false;
         }
         public async void OnTransactionError()
         {
@@ -82,10 +81,6 @@ namespace ZPay
             responseMessage.Text = "Message: " + response.ResponseMessage;
             transactionID.Visible = false;
             responseStatus.Text = "Response: Failure";
-            foreach(var info in response.AdditionalInfo)
-            {
-              additionalInfo.Text = info.Tag;
-            }
         }
 
 
@@ -111,6 +106,25 @@ namespace ZPay
             Process.Start(path, "https://zeusbusiness.in");
         }
 
-      
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                Hide();
+                notifyIcon.Visible = true;
+            }
+        }
+
+        private void notifyIcon_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            Show();
+            notifyIcon.Visible = false;
+        }
+
+        private void ZPay_Load(object sender, EventArgs e)
+        {
+            notifyIcon.Visible = false;
+        }
     }
 }
