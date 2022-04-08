@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_59106A1D7B6A4C939BD6D047FC9EDB80"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_6FA1248A816743B18C606D9314CD4337"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -22,12 +28,6 @@
         "Entry"
         {
         "MsmKey" = "8:_80889D193AE6458E98203E8ACD07A4F5"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A94F32AA3ED843CDB90A42DA45363F84"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -128,6 +128,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_59106A1D7B6A4C939BD6D047FC9EDB80"
+            {
+            "SourcePath" = "8:..\\ZPay\\Resources\\banner.jpg"
+            "TargetName" = "8:banner.jpg"
+            "Tag" = "8:"
+            "Folder" = "8:_4D56F4CF330F4B6B859BDC072F16717C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_80889D193AE6458E98203E8ACD07A4F5"
             {
             "SourcePath" = "8:..\\ZPay\\Resources\\ZPay.ico"
@@ -148,40 +168,30 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A94F32AA3ED843CDB90A42DA45363F84"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\Desktop\\banner.jpg"
-            "TargetName" = "8:banner.jpg"
-            "Tag" = "8:"
-            "Folder" = "8:_4D56F4CF330F4B6B859BDC072F16717C"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
         }
         "FileType"
         {
         }
         "Folder"
         {
-            "{994432C3-9487-495D-8656-3E829A8DBDDE}:_3BC2931C5B9E42F6A0A7FAC8F6122E94"
+            "{1525181F-901A-416C-8A58-119130FE478E}:_056C8A8BAD5241C386555B5C5305D1B2"
             {
-            "DefaultLocation" = "8:[TARGETDIR]"
-            "Name" = "8:ZPay"
+            "Name" = "8:#1928"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
-            "Property" = "8:FOLDER"
+            "Property" = "8:StartupFolder"
+                "Folders"
+                {
+                }
+            }
+            "{1525181F-901A-416C-8A58-119130FE478E}:_24B13358A5BB41698BE180234E670ED3"
+            {
+            "Name" = "8:#1910"
+            "AlwaysCreate" = "11:FALSE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Property" = "8:CommonFilesFolder"
                 "Folders"
                 {
                 }
@@ -193,17 +203,6 @@
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Property" = "8:ProgramMenuFolder"
-                "Folders"
-                {
-                }
-            }
-            "{1525181F-901A-416C-8A58-119130FE478E}:_6D81B01014F2479591FB014CCF6579F7"
-            {
-            "Name" = "8:#1928"
-            "AlwaysCreate" = "11:FALSE"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Property" = "8:StartupFolder"
                 "Folders"
                 {
                 }
@@ -258,15 +257,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ZPay"
-        "ProductCode" = "8:{8A90762D-FAF3-4E82-977C-478C652DBCD5}"
-        "PackageCode" = "8:{7D77D49D-92EE-401D-9967-AA3CD7D9C35B}"
+        "ProductCode" = "8:{C5204FA9-0DD5-4B67-835A-EB8A5674B7A6}"
+        "PackageCode" = "8:{C67C77BD-A479-49C9-9502-E92C6BB40138}"
         "UpgradeCode" = "8:{92909A1C-63DA-4BB7-B510-81C45EB04FD7}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.1"
         "Manufacturer" = "8:Zeus Business"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:www.zeusbusiness.in"
@@ -275,7 +274,7 @@
         "ARPCONTACT" = "8:Zeus Business"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
-        "ARPURLINFOABOUT" = "8:"
+        "ARPURLINFOABOUT" = "8:www.zeusbusiness.in"
         "ARPPRODUCTICON" = "8:_80889D193AE6458E98203E8ACD07A4F5"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
@@ -379,21 +378,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_15B50DD23E904AA78EA5DB8D5C513385"
-            {
-            "Name" = "8:ZPay"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_6FA1248A816743B18C606D9314CD4337"
-            "Folder" = "8:_6D81B01014F2479591FB014CCF6579F7"
-            "WorkingFolder" = "8:_DF2EE585C58F42528B40B630E2256CB6"
-            "Icon" = "8:_80889D193AE6458E98203E8ACD07A4F5"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_48033029652F4CFA9A5D329BB887E45A"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_6CA19F3D74A6434DBA3147EED489D915"
             {
             "Name" = "8:ZPay"
             "Arguments" = "8:"
@@ -407,16 +392,44 @@
             "Icon" = "8:_80889D193AE6458E98203E8ACD07A4F5"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F1328C5B432140A1B9E3E0CF4E73F376"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D30BF7D7F6AF4CC887982212AB3E3F13"
             {
             "Name" = "8:ZPay"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
-            "Transitive" = "11:TRUE"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_6FA1248A816743B18C606D9314CD4337"
+            "Folder" = "8:_24B13358A5BB41698BE180234E670ED3"
+            "WorkingFolder" = "8:_DF2EE585C58F42528B40B630E2256CB6"
+            "Icon" = "8:_80889D193AE6458E98203E8ACD07A4F5"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E65D2BF146D24FCBBDD674B2014D4B94"
+            {
+            "Name" = "8:ZPay"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
             "Target" = "8:_6FA1248A816743B18C606D9314CD4337"
             "Folder" = "8:_F80842861CD3434FBC551F4449942B3E"
+            "WorkingFolder" = "8:_DF2EE585C58F42528B40B630E2256CB6"
+            "Icon" = "8:_80889D193AE6458E98203E8ACD07A4F5"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F1B7FAE54CC34272AC67B2F57FBABC3D"
+            {
+            "Name" = "8:ZPay"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_6FA1248A816743B18C606D9314CD4337"
+            "Folder" = "8:_056C8A8BAD5241C386555B5C5305D1B2"
             "WorkingFolder" = "8:_DF2EE585C58F42528B40B630E2256CB6"
             "Icon" = "8:_80889D193AE6458E98203E8ACD07A4F5"
             "Feature" = "8:"
@@ -449,7 +462,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_A94F32AA3ED843CDB90A42DA45363F84"
+                            "Value" = "8:_59106A1D7B6A4C939BD6D047FC9EDB80"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "CopyrightWarning"
@@ -498,7 +511,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_A94F32AA3ED843CDB90A42DA45363F84"
+                            "Value" = "8:_59106A1D7B6A4C939BD6D047FC9EDB80"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "InstallAllUsersVisible"
@@ -534,7 +547,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_A94F32AA3ED843CDB90A42DA45363F84"
+                            "Value" = "8:_59106A1D7B6A4C939BD6D047FC9EDB80"
                             "UsePlugInResources" = "11:TRUE"
                             }
                         }
@@ -566,7 +579,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_A94F32AA3ED843CDB90A42DA45363F84"
+                            "Value" = "8:_59106A1D7B6A4C939BD6D047FC9EDB80"
                             "UsePlugInResources" = "11:TRUE"
                             }
                         }
@@ -589,7 +602,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_A94F32AA3ED843CDB90A42DA45363F84"
+                            "Value" = "8:_59106A1D7B6A4C939BD6D047FC9EDB80"
                             "UsePlugInResources" = "11:TRUE"
                             }
                         }
@@ -612,7 +625,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_A94F32AA3ED843CDB90A42DA45363F84"
+                            "Value" = "8:_59106A1D7B6A4C939BD6D047FC9EDB80"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "CopyrightWarning"
@@ -676,7 +689,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_A94F32AA3ED843CDB90A42DA45363F84"
+                            "Value" = "8:_59106A1D7B6A4C939BD6D047FC9EDB80"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "UpdateText"
@@ -721,7 +734,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_A94F32AA3ED843CDB90A42DA45363F84"
+                            "Value" = "8:_59106A1D7B6A4C939BD6D047FC9EDB80"
                             "UsePlugInResources" = "11:TRUE"
                             }
                         }
@@ -753,7 +766,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_A94F32AA3ED843CDB90A42DA45363F84"
+                            "Value" = "8:_59106A1D7B6A4C939BD6D047FC9EDB80"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "ShowProgress"
@@ -798,7 +811,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_A94F32AA3ED843CDB90A42DA45363F84"
+                            "Value" = "8:_59106A1D7B6A4C939BD6D047FC9EDB80"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "ShowProgress"
@@ -832,7 +845,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_6FA1248A816743B18C606D9314CD4337"
             {
-            "SourcePath" = "8:..\\ZPay\\obj\\Debug\\net6.0-windows\\apphost.exe"
+            "SourcePath" = "8:..\\ZPay\\obj\\Release\\net6.0-windows\\apphost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_DF2EE585C58F42528B40B630E2256CB6"

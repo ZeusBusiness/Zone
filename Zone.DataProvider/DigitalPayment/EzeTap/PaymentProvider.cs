@@ -20,6 +20,7 @@ namespace Zone.DataProvider.DigitalPayment.EzeTap
                     {
                         string json = r.ReadToEnd();
                         PaymentRequest request = JsonConvert.DeserializeObject<PaymentRequest>(json);
+                        request.pushTo.deviceId = request.pushTo.deviceId + "|ezetap_android";
                         r.Close();
                         File.Delete(file);
                         HttpClient client = new HttpClient();

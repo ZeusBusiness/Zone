@@ -89,7 +89,7 @@
             // zeusLink
             // 
             this.zeusLink.AutoSize = true;
-            this.zeusLink.Location = new System.Drawing.Point(124, 280);
+            this.zeusLink.Location = new System.Drawing.Point(117, 279);
             this.zeusLink.Name = "zeusLink";
             this.zeusLink.Size = new System.Drawing.Size(118, 15);
             this.zeusLink.TabIndex = 3;
@@ -229,7 +229,7 @@
             this.aboutLabel.AutoSize = true;
             this.aboutLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.aboutLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(99)))));
-            this.aboutLabel.Location = new System.Drawing.Point(5, 41);
+            this.aboutLabel.Location = new System.Drawing.Point(3, 41);
             this.aboutLabel.Name = "aboutLabel";
             this.aboutLabel.Size = new System.Drawing.Size(272, 102);
             this.aboutLabel.TabIndex = 0;
@@ -252,7 +252,7 @@
             this.copyright.AutoSize = true;
             this.copyright.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.copyright.ForeColor = System.Drawing.Color.White;
-            this.copyright.Location = new System.Drawing.Point(27, 260);
+            this.copyright.Location = new System.Drawing.Point(26, 260);
             this.copyright.Name = "copyright";
             this.copyright.Size = new System.Drawing.Size(98, 13);
             this.copyright.TabIndex = 3;
@@ -263,7 +263,7 @@
             this.intText.AutoSize = true;
             this.intText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.intText.ForeColor = System.Drawing.Color.White;
-            this.intText.Location = new System.Drawing.Point(26, 180);
+            this.intText.Location = new System.Drawing.Point(24, 180);
             this.intText.Name = "intText";
             this.intText.Size = new System.Drawing.Size(102, 17);
             this.intText.TabIndex = 2;
@@ -272,7 +272,7 @@
             // integrationPicture
             // 
             this.integrationPicture.Image = ((System.Drawing.Image)(resources.GetObject("integrationPicture.Image")));
-            this.integrationPicture.Location = new System.Drawing.Point(13, 200);
+            this.integrationPicture.Location = new System.Drawing.Point(11, 200);
             this.integrationPicture.Name = "integrationPicture";
             this.integrationPicture.Size = new System.Drawing.Size(125, 50);
             this.integrationPicture.TabIndex = 1;
@@ -302,6 +302,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(450, 300);
             this.Controls.Add(this.parrentPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
