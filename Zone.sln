@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zone.Infrastructure", "Zone
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zone.DataProvider", "Zone.DataProvider\Zone.DataProvider.csproj", "{6CBEF042-4C36-4E0A-BDB9-31A9FAC8D86F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zone.DataManager.Abstract", "Zone.DataManager.Abstract\Zone.DataManager.Abstract.csproj", "{97A3EC7B-6235-482E-A34E-746D4EE360E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zone.DataManager.Abstract", "Zone.DataManager.Abstract\Zone.DataManager.Abstract.csproj", "{97A3EC7B-6235-482E-A34E-746D4EE360E6}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ZPay Setup", "ZPay Setup\ZPay Setup.vdproj", "{FF123DF1-B324-49A0-9C4B-A26B22EDC1D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,8 @@ Global
 		{97A3EC7B-6235-482E-A34E-746D4EE360E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97A3EC7B-6235-482E-A34E-746D4EE360E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97A3EC7B-6235-482E-A34E-746D4EE360E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF123DF1-B324-49A0-9C4B-A26B22EDC1D5}.Debug|Any CPU.ActiveCfg = Debug
+		{FF123DF1-B324-49A0-9C4B-A26B22EDC1D5}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

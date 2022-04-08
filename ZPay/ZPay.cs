@@ -1,6 +1,5 @@
 ﻿using System.Diagnostics;
 using Zone.DataManager.Abstract.DataProvider.DigitalPayment.PineLabs;
-using Zone.DataProvider.DigitalPayment.PineLabs;
 using Zone.Infrastructure.Genric.DigitalPayment.PineLabs;
 
 namespace ZPay
