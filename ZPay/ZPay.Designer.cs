@@ -51,7 +51,7 @@
             this.intText = new System.Windows.Forms.Label();
             this.integrationPicture = new System.Windows.Forms.PictureBox();
             this.logo = new System.Windows.Forms.PictureBox();
-            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.zPayNotify = new System.Windows.Forms.NotifyIcon(this.components);
             this.parrentPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adPicture)).BeginInit();
@@ -252,7 +252,7 @@
             this.copyright.AutoSize = true;
             this.copyright.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.copyright.ForeColor = System.Drawing.Color.White;
-            this.copyright.Location = new System.Drawing.Point(27, 266);
+            this.copyright.Location = new System.Drawing.Point(27, 260);
             this.copyright.Name = "copyright";
             this.copyright.Size = new System.Drawing.Size(98, 13);
             this.copyright.TabIndex = 3;
@@ -263,7 +263,7 @@
             this.intText.AutoSize = true;
             this.intText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.intText.ForeColor = System.Drawing.Color.White;
-            this.intText.Location = new System.Drawing.Point(26, 178);
+            this.intText.Location = new System.Drawing.Point(26, 180);
             this.intText.Name = "intText";
             this.intText.Size = new System.Drawing.Size(102, 17);
             this.intText.TabIndex = 2;
@@ -272,7 +272,7 @@
             // integrationPicture
             // 
             this.integrationPicture.Image = ((System.Drawing.Image)(resources.GetObject("integrationPicture.Image")));
-            this.integrationPicture.Location = new System.Drawing.Point(13, 190);
+            this.integrationPicture.Location = new System.Drawing.Point(13, 200);
             this.integrationPicture.Name = "integrationPicture";
             this.integrationPicture.Size = new System.Drawing.Size(125, 50);
             this.integrationPicture.TabIndex = 1;
@@ -287,16 +287,16 @@
             this.logo.TabIndex = 0;
             this.logo.TabStop = false;
             // 
-            // notifyIcon
+            // zPayNotify
             // 
-            this.notifyIcon.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.notifyIcon.BalloonTipText = "ZPay";
-            this.notifyIcon.BalloonTipTitle = "ZPay";
-            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
-            this.notifyIcon.Tag = "ZPay";
-            this.notifyIcon.Text = "notifyIcon";
-            this.notifyIcon.Visible = true;
-            this.notifyIcon.Click += new System.EventHandler(this.notifyIcon_Click);
+            this.zPayNotify.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.zPayNotify.BalloonTipText = "ZPay";
+            this.zPayNotify.BalloonTipTitle = "ZPay";
+            this.zPayNotify.Icon = ((System.Drawing.Icon)(resources.GetObject("zPayNotify.Icon")));
+            this.zPayNotify.Tag = "ZPay";
+            this.zPayNotify.Text = "ZPay";
+            this.zPayNotify.Visible = true;
+            this.zPayNotify.Click += new System.EventHandler(this.notifyIcon_Click);
             // 
             // ZPay
             // 
@@ -352,6 +352,6 @@
         private Label responseStatus;
         private PictureBox refreshPic;
         private Label copyright;
-        private NotifyIcon notifyIcon;
+        private NotifyIcon zPayNotify;
     }
 }

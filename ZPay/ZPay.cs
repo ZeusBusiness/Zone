@@ -110,7 +110,7 @@ namespace ZPay
             if (this.WindowState == FormWindowState.Normal)
             {
                 Hide();
-                notifyIcon.Visible = true;
+                zPayNotify.Visible = true;
             }
         }
 
@@ -118,12 +118,12 @@ namespace ZPay
         {
             this.WindowState = FormWindowState.Normal;
             Show();
-            notifyIcon.Visible = false;
+            zPayNotify.Visible = false;
         }
 
         private void ZPay_Load(object sender, EventArgs e)
         {
-            notifyIcon.Visible = false;
+            zPayNotify.Visible = false;
         }
     }
 }
