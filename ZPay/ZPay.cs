@@ -1,16 +1,18 @@
 ﻿using System.Diagnostics;
+using Zone.DataManager.Abstract.DataProvider.DigitalPayment.EzeTap;
 using Zone.DataManager.Abstract.DataProvider.DigitalPayment.PineLabs;
+using Zone.Infrastructure.Generic.DigitalPayment.EzeTap;
 using Zone.Infrastructure.Genric.DigitalPayment.PineLabs;
 
 namespace ZPay
 {
     public partial class ZPay : Form
     {
-        private readonly ISaleRequestProvider _provider = null;
-        private static SaleResponse response = new SaleResponse();
+        private readonly IPaymentProvider _provider = null;
+        private static PaymentResponse response = new PaymentResponse();
         private FileSystemWatcher watcher = null;
 
-        public ZPay(ISaleRequestProvider provider)
+        public ZPay(IPaymentProvider provider)
         {
             _provider = provider;
             InitializeComponent();
@@ -38,13 +40,11 @@ namespace ZPay
 
         public async void OnCreated(object sender, FileSystemEventArgs e)
         {
-
             response = await _provider.SendData(e.FullPath);
-
         }
         private void refreshPic_Click(object sender, EventArgs e)
         {
-            if (!response.ResponseCode)
+            if (response.Success)
             {
                 OnTransactionSuccess();
             }
@@ -69,17 +69,17 @@ namespace ZPay
 
         public async void OnTransactionSuccess()
         {
-            datetime.Text = "DateTime: " + response.InvoiceDate;
-            responseMessage.Text = "Message: " + response.ResponseMessage;
-            transactionID.Text = "TxnID: " + response.PlutusTransactionReferenceID.ToString();
-            responseStatus.Text = "Response: Success";
+            datetime.Text = "DateTime: " + response.Date;
+            responseMessage.Text = "Message: " + response.Success;
+            transactionID.Text = "TxnID: " + response.p2pRequestId;
+            responseStatus.Text = "Response: Success" ;
         }
         public async void OnTransactionError()
         {
-            datetime.Text = "DateTime: " + response.InvoiceDate;
-            responseMessage.Text = "Message: " + response.ResponseMessage;
+            datetime.Text = "DateTime: " + response.Date;
+            responseMessage.Text = "Message: " + response.ErrorMessage;
             transactionID.Visible = false;
-            responseStatus.Text = "Response: Failure";
+            responseStatus.Text = "Response: " + response.RealCode;
         }
 
 

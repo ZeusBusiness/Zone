@@ -1,5 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
+using Zone.DataManager.Abstract.DataProvider.DigitalPayment.EzeTap;
 using Zone.DataManager.Abstract.DataProvider.DigitalPayment.PineLabs;
+using Zone.DataProvider.DigitalPayment.EzeTap;
 using Zone.DataProvider.DigitalPayment.PineLabs;
 
 namespace ZPay
@@ -28,6 +30,7 @@ namespace ZPay
         private static void ConfigureServices(ServiceCollection services)
         {
             services.AddScoped<ISaleRequestProvider, SaleRequestProvider>();
+            services.AddScoped<IPaymentProvider, PaymentProvider>();
         }
     }
 }

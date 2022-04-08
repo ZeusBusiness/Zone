@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Zone.Infrastructure.Generic.DigitalPayment.EzeTap;
 using Zone.Infrastructure.Genric.DigitalPayment.PineLabs;
 
 namespace Zone.DataManager.Abstract.DataProvider.DigitalPayment.PineLabs
